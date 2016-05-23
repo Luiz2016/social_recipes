@@ -11,6 +11,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'simple_form'
 
+
 group :development, :test do
   gem 'pry-rails'
   gem 'pry-byebug'
@@ -18,12 +19,15 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'capybara'
   gem 'simplecov', require: false
+
+
 end
 
 group :development do
   gem 'web-console', '~> 2.0'
   gem 'spring'
   gem 'rubocop', require: false
+
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

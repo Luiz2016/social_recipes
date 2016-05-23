@@ -33,12 +33,12 @@ feature 'User creates recipe' do
     expect(page).to have_content recipe.level
     expect(page).to have_content recipe.ingredients
     expect(page).to have_content recipe.step_by_step
-end
+ end
 
     scenario 'invalid' do
     visit new_recipe_path
     click_on 'Cadastrar Receita'
 
     expect(page).to have_content "Warning! All fields are mandatory."
-  end
+ end
 end
