@@ -5,21 +5,21 @@ feature 'User creates recipe' do
  scenario 'successfully' do
   recipe = Recipe.new(name:'Macarronada', kitchen:'Italiana',
                       kind:'Prato Principal', proferably:'Massas',
-                      serves:1, preparation_time:12, level:'Easy',
+                      serves:1, preparation_time:12, level:'Fácil',
                       ingredients:'Macarrão, Tomate',
-                      step_by_step:'Pegue o macarrão...')
+                      step_by_step:'Pegue o Macarrão...')
 
     visit new_recipe_path
 
-    fill_in 'Receita',            with: recipe.name
-    fill_in 'Italiana',           with: recipe.kitchen
-    fill_in 'Principal',          with: recipe.kind
-    fill_in 'Massas',             with: recipe.proferably
-    select 1,                     from: 'serves'
-    select 30,                    from: 'Tempo de Preparo'
-    fill_in 'Nivel',              with: recipe.level
+    fill_in 'Nome',               with: recipe.name
+    fill_in 'Cozinha',            with: recipe.kitchen
+    fill_in 'Tipo',               with: recipe.kind
+    fill_in 'Preferencia',        with: recipe.proferably
+    fill_in 'Porções',            with: recipe.serves
+    fill_in 'Tempo de Preparo',   with: recipe.preparation_time
+    select recipe.level,          from: 'Dificuldade'
     fill_in 'Ingredientes',       with: recipe.ingredients
-    fill_in 'Preparo',            with: recipe.step_by_step
+    fill_in 'Passo a Passo',      with: recipe.step_by_step
 
 
     click_on 'Enviar Receita'
@@ -35,10 +35,12 @@ feature 'User creates recipe' do
     expect(page).to have_content recipe.step_by_step
  end
 
-    scenario 'invalid' do
+  scenario 'invalid' do
     visit new_recipe_path
-    click_on 'Cadastrar Receita'
 
-    expect(page).to have_content "Warning! All fields are mandatory."
- end
+    click_on 'Enviar Receita'
+
+    expect(page).to have_content 'Preencher os Campos Obrigatórios'
+  end
+
 end

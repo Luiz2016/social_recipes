@@ -4,12 +4,19 @@ class RecipesController < ApplicationController
   end
 
   def create
-    @recipe = Recipe.new(recipe_params)
-  if @recipe.save
+    @recipe = Recipe.new(params.require(:recipe).permit(:name, :kitchen, :kind,
+                                        :proferably, :serves, :preparation_time,
+                                        :level, :ingredients, :step_by_step))
+    if @recipe.save
       redirect_to @recipe
-  else
-      flash[:warning] = 'Warning! All fields are mandatory.'
-      render :new
+    else
+      flash[:error] = 'Preencher os Campos Obrigatórios'
+      render 'new'
+    end
+
   end
-end
+
+  def show
+    @recipe = Recipe.find(params[:id])
+  end
 end
