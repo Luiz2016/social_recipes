@@ -19,7 +19,7 @@ feature 'User creates recipe' do
     fill_in 'Tempo de Preparo',   with: recipe.preparation_time
     select recipe.level,          from: 'Dificuldade'
     fill_in 'Ingredientes',       with: recipe.ingredients
-    fill_in 'Passo a Passo',      with: recipe.step_by_step
+    fill_in 'Modo de Preparo',      with: recipe.step_by_step
 
 
     click_on 'Enviar Receita'

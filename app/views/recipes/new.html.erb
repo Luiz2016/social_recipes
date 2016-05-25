@@ -1,13 +1,14 @@
 <%= flash[:error] %>
-<%= simple_form_for @recipe do |f| %>
-  <%= f.input :name, label: 'Nome' %>
-  <%= f.input :kitchen, label: 'Cozinha' %>
-  <%= f.input :kind, label: 'Tipo' %>
-  <%= f.input :proferably, label: 'Preferencia' %>
-  <%= f.input :serves, label: 'Porções' %>
-  <%= f.input :preparation_time, label: 'Tempo de Preparo' %>
-  <%= f.input :level, label: 'Dificuldade', collection:['Fácil', 'Médio', 'Dificil'] %>
-  <%= f.input :ingredients, label: 'Ingredientes' %>
-  <%= f.input :step_by_step, label: 'Passo a Passo' %>
-  <%= f.submit 'Enviar Receita' %>
+<h1>Cadastrar Receita</h1>
+ <%= simple_form_for @recipe do |f| %>
+ <%= f.input :name, label: 'Nome' %>
+ <%= f.input :kitchen, label: 'Cozinha' %>
+ <%= f.input :kind, label: 'Tipo' %>
+ <%= f.input :proferably, label: 'Preferencia' %>
+ <%= f.input :serves, label: 'Porções' %>
+ <%= f.input :preparation_time, label: 'Tempo de Preparo' %>
+ <%= f.input :level, label: 'Dificuldade', collection:['Fácil', 'Médio', 'Dificil'] %>
+ <%= f.input :ingredients, label: 'Ingredientes' %>
+ <%= f.input :step_by_step, label: 'Modo de Preparo' %>
+ <%= f.submit 'Enviar Receita' %>
 <% end %>

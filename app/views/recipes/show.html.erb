@@ -1,9 +1,43 @@
 <h1><%= @recipe.name %></h1>
-<%= @recipe.kitchen %>
-<%= @recipe.kind %>
-<%= @recipe.proferably %>
-<%= @recipe.serves %>
-<%= @recipe.preparation_time %>
-<%= @recipe.level %>
-<%= @recipe.ingredients %>
-<%= @recipe.step_by_step %>
+<hr>
+ <p>
+  <strong> Cozinha: </strong>
+   <%= @recipe.kitchen %>
+ </p>
+
+  <p>
+   <strong> Tipo: </strong>
+    <%= @recipe.kind %>
+  </p>
+
+  <p>
+   <strong> Preferencia: </strong>
+    <%= @recipe.proferably %>
+  </p>
+
+  <p>
+   <strong> Porção: </strong>
+    <%= @recipe.serves %>
+  </p>
+
+  <p>
+   <strong> Tempo de Preparo: </strong>
+    <%= @recipe.preparation_time %>
+  </p>
+
+  <p>
+   <strong> Nivel de Dificuldade: </strong>
+    <%= @recipe.level %>
+  </p>
+
+  <p>
+   <strong> Ingredientes: </strong>
+    <%= @recipe.ingredients %>
+  </p>
+
+  <p>
+   <strong> Modo de Preparo: </strong>
+    <%= @recipe.step_by_step %>
+  </p>
+  <%= link_to 'Cadastrar Nova Receita', new_recipe_path %>
+  
