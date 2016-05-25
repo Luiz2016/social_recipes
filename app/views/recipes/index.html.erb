@@ -1,0 +1,7 @@
+<% @recipes.each do |rec| %>
+  <%= link_to rec.name, recipe_path(rec) %>
+  <%= rec.proferably %>
+  <%= rec.kind %>
+  <%= rec.kitchen %>
+  <%= rec.level %>
+<% end %>
