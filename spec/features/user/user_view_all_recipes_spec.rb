@@ -59,6 +59,6 @@ feature 'user view all recipes' do
     expect(page).to have_content recipe.ingredients
     expect(page).to have_content recipe.step_by_step
     expect(page).to have_content recipe.serves
-    
+
   end
 end

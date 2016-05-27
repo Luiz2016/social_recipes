@@ -1,6 +1,6 @@
 <h1><%= @recipe.name %></h1>
 <hr>
- <p>
+<p>
   <strong> Cozinha: </strong>
    <%= @recipe.kitchen %>
  </p>
@@ -40,4 +40,4 @@
     <%= @recipe.step_by_step %>
   </p>
   <%= link_to 'Cadastrar Nova Receita', new_recipe_path %>
-  
+  <%= link_to 'Voltar', root_path %>

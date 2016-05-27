@@ -13,7 +13,6 @@ class RecipesController < ApplicationController
       flash[:error] = 'Preencher os Campos Obrigatórios'
       render 'new'
     end
-
   end
 
   def show

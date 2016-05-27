@@ -11,6 +11,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'simple_form'
 gem 'bootstrap-sass'
+gem 'rails_bootstrap_navbar'
 gem 'autoprefixer-rails'
 
 
