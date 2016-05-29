@@ -1,5 +1,4 @@
 class KitchensController < ApplicationController
-
   def new
     @kitchen = Kitchen.new
   end
@@ -16,9 +15,5 @@ class KitchensController < ApplicationController
 
   def show
     @kitchen = Kitchen.find(params[:id])
-  end
-
-  def index
-    @kitchen = Kitchen.all
   end
 end
