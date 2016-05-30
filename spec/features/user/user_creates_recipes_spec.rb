@@ -1,13 +1,11 @@
 require 'rails_helper'
-
 feature 'User creates recipe' do
-
- scenario 'successfully' do
-  recipe = Recipe.new(name:'Macarronada', kitchen:'Italiana',
-                      kind:'Prato Principal', proferably:'Massas',
-                      serves:1, preparation_time:12, level:'Fácil',
-                      ingredients:'Macarrão, Tomate',
-                      step_by_step:'Pegue o Macarrão...')
+  scenario 'successfully' do
+    recipe = Recipe.new(name: 'Macarronada', kitchen: 'Italiana',
+                        kind: 'Prato Principal', proferably: 'Massas',
+                        serves: 1, preparation_time:12, level: 'Fácil',
+                        ingredients: 'Macarrão, Tomate',
+                        step_by_step: 'Pegue o Macarrão...')
 
     visit new_recipe_path
 
@@ -19,8 +17,7 @@ feature 'User creates recipe' do
     fill_in 'Tempo de Preparo',   with: recipe.preparation_time
     select recipe.level,          from: 'Dificuldade'
     fill_in 'Ingredientes',       with: recipe.ingredients
-    fill_in 'Modo de Preparo',      with: recipe.step_by_step
-
+    fill_in 'Modo de Preparo',    with: recipe.step_by_step
 
     click_on 'Enviar Receita'
 
@@ -33,14 +30,13 @@ feature 'User creates recipe' do
     expect(page).to have_content recipe.level
     expect(page).to have_content recipe.ingredients
     expect(page).to have_content recipe.step_by_step
- end
-
-  scenario 'invalid' do
-    visit new_recipe_path
-
-    click_on 'Enviar Receita'
-
-    expect(page).to have_content 'Preencher os Campos Obrigatórios'
   end
 
+  scenario 'invalid' do
+  visit new_recipe_path
+
+  click_on 'Enviar Receita'
+
+  expect(page).to have_content 'Preencher os Campos Obrigatórios'
+  end
 end

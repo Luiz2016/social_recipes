@@ -1,13 +1,13 @@
 FactoryGirl.define do
   factory :recipe do
-    name ""
-    kitchen ""
-    kind ""
-    proferably ""
-    serves ""
-    preparation_time ""
-    level ""
-    ingredients ""
-    preparationtext "MyString"
+    name 'Feijoada'
+    kitchen 'Brasileira'
+    kind 'Feijão'
+    proferably 'Principal'
+    serves '8'
+    preparation_time '30'
+    level 'Fácil'
+    ingredients 'Feijão'
+    preparation 'Pegue o Feijão...'
   end
 end

@@ -1,6 +1,5 @@
 FactoryGirl.define do
   factory :preference do
-    name "MyString"
-    body "MyString"
+    name 'Italiana'
   end
 end
