@@ -13,6 +13,7 @@ gem 'simple_form'
 gem 'bootstrap-sass'
 gem 'rails_bootstrap_navbar'
 gem 'autoprefixer-rails'
+gem 'node', '~> 0.0.2'
 
 
 group :development, :test do

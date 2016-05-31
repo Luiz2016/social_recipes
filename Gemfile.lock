@@ -70,6 +70,8 @@ GEM
     diff-lcs (1.2.5)
     docile (1.1.5)
     erubis (2.7.0)
+    eventmachine (1.2.0.1)
+    eventmachine (1.2.0.1-x86-mingw32)
     execjs (2.7.0)
     factory_girl (4.7.0)
       activesupport (>= 3.0.0)
@@ -99,6 +101,8 @@ GEM
     mini_portile2 (2.0.0)
     minitest (5.9.0)
     multi_json (1.12.1)
+    node (0.0.2)
+      eventmachine
     nokogiri (1.6.7.2)
       mini_portile2 (~> 2.0.0.rc2)
     nokogiri (1.6.7.2-x86-mingw32)
@@ -234,6 +238,7 @@ DEPENDENCIES
   factory_girl_rails
   jbuilder (~> 2.0)
   jquery-rails
+  node (~> 0.0.2)
   pry-byebug
   pry-rails
   rails (= 4.2.6)

@@ -1,3 +1,4 @@
+
 <h1>Receitas</h1>
 <hr>
   <% @recipes.each do |rec| %>
@@ -6,15 +7,19 @@
    <%= link_to rec.name, recipe_path(rec) %>
  </p>
  <p>
+   <strong> Preferencia: </strong>
    <%= rec.proferably %>
  </p>
  <p>
+   <strong> Tipo: </strong>
    <%= rec.kind %>
  </p>
  <p>
+   <strong> Cozinha: </strong>
    <%= rec.kitchen %>
  </p>
  <p>
+   <strong> Dificuldade: </strong>
    <%= rec.level %>
  </p>
 <hr>

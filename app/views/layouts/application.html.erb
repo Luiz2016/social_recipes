@@ -1,9 +1,30 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>SocialRecipes</title>
-</head>
-<body>
-<%= yield %>
-</body>
+  <head>
+    <title> Receitas da Vovó </title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <nav class='navbar navbar-inverse'>
+      <div class='container-fluid'>
+        <div class='navbar-header title-logo'>
+          <%= link_to 'Receitas da Vovó', root_path %>
+        </div>
+        <div class='collapse navbar-collapse'>
+          <ul class="nav navbar-nav navbar-right">
+            <li><%= link_to 'Cadastrar Receitas', new_recipe_path %> </li>
+            <li><%= link_to 'Visualizaar Receitas', recipes_path %> </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <%= yield %>
+    </div>
+  </body>
 </html>
