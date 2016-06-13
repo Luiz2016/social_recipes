@@ -1,5 +1,6 @@
 <%= flash[:error] %>
-<h1>Cadastrar Receita</h1>
+<h3>Cadastrar Receita</h3>
+<div class="well well-lg">
  <%= simple_form_for @recipe do |f| %>
  <%= f.input :name, label: 'Nome' %>
  <%= f.input :kitchen, label: 'Cozinha' %>
@@ -10,5 +11,6 @@
  <%= f.input :level, label: 'Dificuldade', collection:['Fácil', 'Médio', 'Dificil'] %>
  <%= f.input :ingredients, label: 'Ingredientes' %>
  <%= f.input :step_by_step, label: 'Modo de Preparo' %>
- <%= f.submit 'Enviar Receita' %>
+ <%= f.submit 'Enviar Receita', class:'btn btn-warning' %>
 <% end %>
+</div>

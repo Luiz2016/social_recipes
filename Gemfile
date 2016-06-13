@@ -14,7 +14,7 @@ gem 'bootstrap-sass'
 gem 'rails_bootstrap_navbar'
 gem 'autoprefixer-rails'
 gem 'node', '~> 0.0.2'
-
+gem 'therubyracer', :platform => :ruby
 
 group :development, :test do
   gem 'pry-rails'
